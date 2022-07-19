@@ -1,16 +1,25 @@
 <template>
 <div id="app">
   
-    <navbar-vue></navbar-vue>
-    <formContener-vue></formContener-vue>
-    <cardIrem-vue></cardIrem-vue>
-    <cardIrem-vue></cardIrem-vue>
+    <NavbarVue></NavbarVue>
+    <FormContenerVue></FormContenerVue>
+    <CardItemVue></CardItemVue>
+    <CardItemVue></CardItemVue>
 </div>
 
 </template>
 <script>
 
+import NavbarVue from './components/NavbarVue.vue';
+import FormContenerVue from './components/FormContenerVue.vue';
+import CardItemVue from './components/CardItemVue.vue';
 export default {
+    name:'App',
+    components:{
+        NavbarVue,
+        FormContenerVue,
+        CardItemVue
+    }
   
 
 };
