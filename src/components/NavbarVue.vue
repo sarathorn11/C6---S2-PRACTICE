@@ -14,7 +14,8 @@
 
 
 export default {
-     name: 'NavbarVue'
+    
+   
 
 
 
@@ -24,7 +25,7 @@ export default {
 <style>
 
 nav{
-    background: rgb(242, 41, 172);
+    background: rgb(223, 155, 19);
 }
 nav ul{
     display: flex;

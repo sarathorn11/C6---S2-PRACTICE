@@ -2,13 +2,17 @@
 
     <div class="all_card">
         <div class="card">
+            <div class="titleSkills">Personal Details</div>
             <div class="name">
-                RONAN OGOR
-            
-
+                {{friend.FirstName}} {{friend.Lastname}}
             </div>
             <div class="comment">
-                The best of the best
+                {{friend.comment}}
+            </div>
+            <hr>
+            <div class="titleSkills">Skills</div>
+            <div class="listOfSkills">
+                <skill-item v-for="skill in friend.skills" :key="skill" :listOfSkills="skill" />
             </div>
         </div>
 
@@ -18,9 +22,17 @@
 
 <script>
 
-
+import SkillsVue from "./SkillView.vue"
 export default {
-    name: 'CardItemVue'
+    components:{
+        'skill-item': SkillsVue,
+    },
+    name: 'CardItemVue',
+    props:{
+        friend: Object,
+        listOfSkills:[]
+    }
+    
 
 }
 </script>
@@ -41,5 +53,13 @@ export default {
 .name{
     font-weight: bold;
     margin-bottom: 7px;
+}
+.titleSkills{
+    background: rgb(77, 197, 206);
+    font-weight: bold;
+    margin-bottom: 0.7rem;
+}
+.listOfSkills{
+    display: flex;
 }
 </style>
